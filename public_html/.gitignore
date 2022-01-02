@@ -13,6 +13,7 @@
 
 # Ignore everything in the root except the "wp-content" directory.
 /*
+/.idea
 !.gitignore
 !privatemarket-migrate-20220102111530.sql.gz
 !wp-content/
