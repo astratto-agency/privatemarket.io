@@ -20,7 +20,7 @@
 # and "themes" directories.
 wp-content/*
 !wp-content/plugins/
-!wp-content/themes/
+!wp-content/tehemes/
 
 # Ignore everything in the "plugins" directory, except the plugins you
 # specify (see the commented-out examples for hints on how to do this.)
@@ -30,7 +30,9 @@ wp-content/*
 
 # Ignore everything in the "themes" directory, except the themes you
 # specify (see the commented-out example for a hint on how to do this.)
-# wp-content/themes/*
+wp-content/themes/*
+!wp-content/themes/a5tratto-theme/*
+!wp-content/themes/a5tratto-theme-child/*
 # !wp-content/themes/my-theme/wp-content/upgrade/*
 wp-content/backup-db/*
 wp-content/cache/*
