@@ -21,6 +21,8 @@
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
+!wp-content/themes/a5tratto-theme/
+!wp-content/themes/a5tratto-theme-child/
 /wp-content/themes/privatemarket/
 /wp-content/themes/a5tratto-theme-child/assets/.sass-cache/
 
