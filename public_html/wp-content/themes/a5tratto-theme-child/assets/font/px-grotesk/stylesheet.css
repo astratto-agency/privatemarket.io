@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'Px Grotesk';
+    src: url('PxGrotesk-Bold.eot');
+    src: url('PxGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+        url('PxGrotesk-Bold.woff2') format('woff2'),
+        url('PxGrotesk-Bold.woff') format('woff'),
+        url('PxGrotesk-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Px Grotesk';
+    src: url('PxGrotesk-Light.eot');
+    src: url('PxGrotesk-Light.eot?#iefix') format('embedded-opentype'),
+        url('PxGrotesk-Light.woff2') format('woff2'),
+        url('PxGrotesk-Light.woff') format('woff'),
+        url('PxGrotesk-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Px Grotesk';
+    src: url('PxGroteskRegular.eot');
+    src: url('PxGroteskRegular.eot?#iefix') format('embedded-opentype'),
+        url('PxGroteskRegular.woff2') format('woff2'),
+        url('PxGroteskRegular.woff') format('woff'),
+        url('PxGroteskRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

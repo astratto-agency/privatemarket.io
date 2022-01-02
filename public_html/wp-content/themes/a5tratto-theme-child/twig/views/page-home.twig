@@ -1,0 +1,354 @@
+{% extends "base.twig" %}
+{% block content %}
+    <article class="post-type-{{ post.post_type }}" id="post-{{ post.ID }}">
+        <section class="section-home my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 py-2 mt-5 mb-5">
+                        <h1 class="display-1 ">{{ header_title }}</h1>
+                        <div class="row">
+                            <div class="col-12 col-md-4 offset-md-2 my-2">
+                                <a href="{{ header_button.url }}" class="pmkt-btn">{{ header_button.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <script>
+
+            const url = 'http://www.mocky.io/v2/5b0d62483100006e009d5680';
+            fetch(url).then(response => {
+                return response.json();
+            }).then(data => {
+                let statistiche = data.stats;
+                return statistiche.map(statistica => {
+                    for (var i = 0; i <= 5; i++) {
+                        document.getElementById('item_label_' + `${statistica.id}`).innerHTML = `${statistica.label}`;
+                        document.getElementById('item_value_' + `${statistica.id}`).innerHTML = `${statistica.value}`;
+                    }
+                });
+            }).catch(error => {
+                console.log(error);
+            });
+
+        </script>
+
+        <section class="section-plus my-5  ">
+
+            <div class="row m-0 no-gutters">
+                <div class="col-12 col-md-6 m-0 p-0">
+                    <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block  ">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block  ">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block  ">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block  ">
+
+                    </div>
+                    <div class="bg-primary text-white cube-sm text-center">
+                        <div class="cube-text">
+                            <p><span class="h3" id="item_value_4"> </span><br><span id="item_label_4"> </span></p>
+
+                        </div>
+                    </div>
+                    <div class="cube-sm d-none d-md-block  ">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block  ">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4 m-0 p-0 align-self-center ">
+                    <p class="pb-3 my-5 ">{{ plus_description }}</p>
+                </div>
+                <div class="col-12 col-md-6 m-0 p-0">
+                    <div class="cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="bg-secondary text-white cube-sm text-center">
+                        <div class="cube-text">
+                            <p><span class="h3" id="item_value_3"> </span><br><span id="item_label_3"> </span></p>
+                        </div>
+                    </div>
+                    <div class="cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="bg-primary text-white cube-sm text-center">
+                        <div class="cube-text">
+                            <p><span class="h3" id="item_value_5"> </span><br><span id="item_label_5"> </span></p>
+
+                        </div>
+                    </div>
+                    <div class="cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 m-0 p-0">
+                    <div class="bg-secondary text-white cube-lg text-center">
+                        <div class="cube-text">
+                            <p><span class="h1" id="item_value_1"></span><br><span id="item_label_1"> </span></p>
+                        </div>
+                    </div>
+                    <div class="cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="bg-primary text-white cube-sm text-center">
+                        <div class="cube-text">
+                            <p><span class="h3" id="item_value_2"> </span><br><span id="item_label_2"> </span></p>
+                        </div>
+                    </div>
+
+                    <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                    </div>
+                    <div class="cube-sm d-none d-md-block">
+
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 m-0 p-0 d-none d-md-block">
+                    <div class="cube-sm ">
+
+                    </div>
+                    <div class="cube-sm ">
+
+                    </div>
+
+
+                    <div class="bg-tertiary cube-sm ">
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </section>
+        <section class="section-featured">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 my-5">
+                        <h4>{{ featured_title }}</h4>
+                    </div>
+                    <div class="col-12 text-center my-5">
+                        <div class="owl-carousel owl-theme  " id="carousel-owl-base">
+                            {% for featured in featureds %}
+                                <div>
+                                    <img src="{{ featured.img.url }}" alt="" class="img-fluid">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <script>
+
+                </script>
+            </div>
+        </section>
+        <section class="section-adv">
+            <div class="container-fluid my-5 px-0 mx-0">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-11 offset-md-1  ">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-6 my-5 align-self-center  ">
+                                <h1 class="font-weight-light my-5 display-3">{{ investors_title }}</h1>
+
+                                {% for investor in investors %}
+                                    <div class="row px-0 mx-0">
+                                        <div class="col-12 my-3">
+                                            <div class="row px-0 mx-0">
+                                                <div class="col-12 col-md-3 ">
+                                                    <p class="br-bt h5">0{{ loop.index }}</p>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="pmkt"> {{ investor.description }} </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+
+
+                            </div>
+                            <div class="col-12 col-md-5 offset-md-1 col-md-5 px-0   ">
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+
+
+                                <div class="bg-secondary text-white cube-lg text-center">
+                                    <img src="{{ stylesheet_directory_uri }}/img/privatemaket/img-investor.png" alt=""
+                                         class="img-fluid w-100">
+                                </div>
+                                <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-founds">
+            <div class="container-fluid my-5 px-0 mx-0">
+                <div class="row no-gutters">
+                    <div class="col-12 col-md-12 ">
+                        <div class="row no-gutters">
+                            <div class="col-12 col-md-5  col-md-5 px-0 order-md-1 order-2 ">
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+
+
+                                <div class="bg-secondary text-white cube-lg text-center">
+                                    <img src="{{ stylesheet_directory_uri }}/img/privatemaket/img-found.png" alt=""
+                                         class="img-fluid w-100">
+                                </div>
+                                <div class="bg-tertiary cube-sm d-none d-md-block">
+
+                                </div>
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+
+                                <div class="cube-sm d-none d-md-block">
+
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 offset-md-1 my-5 align-self-center order-md-2 order-1 ">
+                                <h1 class="font-weight-light my-5 display-3">{{ founds_title }}</h1>
+
+                                {% for investor in investors %}
+                                    <div class="row px-0 mx-0">
+                                        <div class="col-12 my-3">
+                                            <div class="row px-0 mx-0">
+                                                <div class="col-12 col-md-3 ">
+                                                    <p class="br-bt h5">0{{ loop.index }}</p>
+                                                </div>
+                                                <div class="col-12 col-md-9">
+                                                    <p class="pmkt"> {{ investor.description }} </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="section-tech my-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-10">
+                        <h1 class="font-weight-light my-5 display-3">{{ tech_title }}</h1>
+                    </div>
+                    <div class="col-12 col-md-9 offset-md-2 pb-3">
+                        <p class=" pmkt my-5 ">{{ tech_description }}</p>
+                    </div>
+                </div>
+
+                {% for tech in technology %}
+                    <div class="row">
+                        <div class="col-12 col-md-9 offset-md-2 my-4">
+                            <div class="row">
+                                <div class="col-12 col-md-3">
+                                    <img src="{{ tech.img.url }}" alt="" height="40px" class="my-2">
+                                </div>
+                                <div class="col-12 col-md-9">
+                                    <p class=" pmkt  ">{{ tech.title }}</p>
+                                    <p class="   ">{{ tech.description }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </section>
+        <section class="section-partners my-5">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 my-5">
+                        <h4>{{ partner_title }}</h4>
+                    </div>
+                    <div class="col-12 text-center my-5">
+                        <div class="owl-carousel owl-theme equal-cols" id="carousel-owl-base">
+                            {% for part in partners %}
+                                <div>
+                                    <img src="{{ part.img.url }}" alt="" class="img-fluid">
+                                </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <script>
+
+                </script>
+            </div>
+        </section>
+        <section class="section-contact my-5">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 my-5">
+
+                        <div class="row">
+                            <div class="col-12 col-md-9  my-2">
+                                <h1 class="display-3">{{ contact_title }}</h1>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-4 offset-md-2 my-2">
+                                <a href="{{ contact_button.url }}" class="pmkt-btn">{{ contact_button.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </article>
+{% endblock %}
