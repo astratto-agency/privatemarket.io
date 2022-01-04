@@ -366,7 +366,9 @@ a:hover {
 }
 
 .section-founds .cube-sm,
-.section-adv .cube-lg {
+.section-adv .cube-sm,
+.section-founds .cube-lg,
+.section-adv .cube-lg{
 
     width: 100vw;
     height: 100vw;
@@ -491,6 +493,25 @@ a:hover {
     font-size: 4.5rem;
   }
 }
+
+
+/*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::: 11 * A_SETTINGS logo
+::::::::::::::      Impostazioni per css
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.logo {
+  width: 237px;
+  height: 40px;
+  background-image: url("../img/privatemaket/logo-header.svg");
+  transition: 0.2s all ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.logo:hover {
+  background-image: url("../img/privatemaket/logo-header-hover.svg");
+}
+
 
 
 /*:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
@@ -664,11 +685,12 @@ button.navbar-toggler:focus, button.navbar-toggler:focus-visible {
 
 
 .pmkt-btn {
-  font-size: 19px;
+  font-size: 24px;
+  line-height: 40px;
   background: none;
   color: $primary-rgb;
   border: none;
-
+  font-weight: bold;
   margin: 4px auto;
   transition: 0.7s all ease-in-out;
 }
@@ -685,8 +707,8 @@ button.navbar-toggler:focus, button.navbar-toggler:focus-visible {
 .pmkt-btn:before {
   content: '';
   display: block;
-  width: 100%;
-  margin-top: 28px;
+  width: 95%;
+  margin-top: 45px;
   height: 2px;
   background: $primary-rgb;
   position: absolute;
